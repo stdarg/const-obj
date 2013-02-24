@@ -1,6 +1,6 @@
 var assert = require('assert');
 var is = require('is2');
-var Config = require('../lib/config').Config;
+var ConstObj = require('../lib/const-obj');
 
 describe('Config()', function() {
     it('Should throw if pathToConfigFile is an empty string.', function() {
