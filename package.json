@@ -1,0 +1,23 @@
+{
+      "name" : "const-obj"
+    , "version" : "0.0.1"
+    , "description" : "A simple module that makes all properties constant."
+    , "tags" : [ "utilities", "JavaScript", "node.js", "object", "constant" ]
+    , "author" : "Edmond Meinfelder <edmond@stdarg.com>"
+    , "maintainers" : "Edmond Meinfelder <edmond@stdarg.com>"
+    , "homepage" : "http://github.com/stdarg/const-obj"
+    , "repository" : {
+          "type" : "git"
+        , "url" : "git@github.com:stdarg/const-obj.git" }
+    , "bugs" : { "url" : "http://github.com/stdarg/const-obj/issues" }
+    , "licenses" : [ {
+          "type" : "MIT"
+        , "url" : "http://opensource.org/licenses/MIT" } ]
+    , "main" : "./lib/is2.js"
+    , "scripts" : { "test" : "./node_modules/.bin/mocha --reporter list" }
+    , "engines" : { "node" : ">=v0.8.0" }
+    , "dependencies" : { }
+    , "devDependencies" : {
+          "mocha" : "1.8.1"
+      }
+}
