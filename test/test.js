@@ -1,28 +1,31 @@
 var assert = require('assert');
 var is = require('is2');
-var ConstObj = require('../lib/const-obj');
+var makeObjConst = require('../lib/const-obj').makeObjConst;
+var makePropConst = require('../lib/const-obj').makePropConst;
 
-describe('Config()', function() {
-    it('Should throw if pathToConfigFile is an empty string.', function() {
-        assert.throws(function() { new Config(''); });
+describe('makeObjConst()', function() {
+    it('Should make an object\'s properties constant.', function() {
+        var obj = {
+            a: 111,
+            b: '222',
+            c: { d: 333 } };
+        makeObjConst(obj);
+        obj.a = 222;            // this is legal, but has no effect
+        assert.ok(obj.a === 111);
+        obj.b = 'Hmm';          // this is legal, but has no effect
+        assert.ok(obj.b === '222');
+        obj.c.d = true;
+        assert.ok(obj.c.d === 333);
     });
 });
 
-describe('Config()', function() {
-    it('Should throw if pathToConfigFile is not a string.', function() {
-        assert.throws(function() { new Config(true); });
+describe('makePropConst()', function() {
+    it('Should make a single property constant.', function() {
+        var obj = { alpha: '0', beta: false };
+        makePropConst(obj, 'alpha');
+        obj.alpha = 678;
+        assert.ok(obj.alpha === '0');
+        obj.beta = true;
+        assert.ok(obj.beta === true);
     });
 });
-
-describe('Config()', function() {
-    it('Should throw if pathToConfigFile does not point to a file.', function() {
-        assert.throws(function() { new Config('/djdkd/djkdjddk'); });
-    });
-});
-
-describe('Config()', function() {
-    it('Should not throw if pathToConfigFile does point to a file.', function() {
-        new Config('./test/cfg_example.js');
-    });
-});
-

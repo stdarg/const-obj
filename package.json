@@ -16,8 +16,6 @@
     , "main" : "./lib/const-obj.js"
     , "scripts" : { "test" : "./node_modules/.bin/mocha --reporter list" }
     , "engines" : { "node" : ">=v0.8.0" }
-    , "dependencies" : { }
-    , "devDependencies" : {
-          "mocha" : "1.8.1"
-      }
+    , "dependencies" : { "is2" : "" }
+    , "devDependencies" : { "mocha" : "1.8.1" }
 }
