@@ -13,7 +13,7 @@
     , "licenses" : [ {
           "type" : "MIT"
         , "url" : "http://opensource.org/licenses/MIT" } ]
-    , "main" : "./lib/is2.js"
+    , "main" : "./lib/const-obj.js"
     , "scripts" : { "test" : "./node_modules/.bin/mocha --reporter list" }
     , "engines" : { "node" : ">=v0.8.0" }
     , "dependencies" : { }
