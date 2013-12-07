@@ -21,7 +21,7 @@ This function returns the object upon success and false upon failure.
 ## makePropConst(object:Object, property:String)
 Make a property immutable (assuring it cannot be changed from the current
 value).  This operation cannot be un-done. This function returns the object on
-success and false on any failre.
+success and false on any failure.
 
 # Examples
 
