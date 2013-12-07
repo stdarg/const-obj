@@ -1,6 +1,6 @@
 {
       "name" : "const-obj"
-    , "version" : "0.0.1"
+    , "version" : "0.0.2"
     , "description" : "A simple module that makes all properties constant."
     , "tags" : [ "utilities", "JavaScript", "node.js", "object", "constant" ]
     , "author" : "Edmond Meinfelder <edmond@stdarg.com>"
