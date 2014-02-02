@@ -43,8 +43,7 @@ success and false on any failure.
     }
     assert.ok(obj.a === 111);
 
-The above code would not throw because the values cannot be changed. Also,
-assignments to constant properties does not cause errors.
+The above code will throw because the values cannot be changed.
 
         var makePropConst = require('const-obj').makePropConst;
         var obj = { alpha: '0', beta: false };
@@ -60,7 +59,7 @@ assignments to constant properties does not cause errors.
         obj.beta = true;
         assert.ok(obj.beta === true);
 
-The above code will not throw because the property is constant and cannot be
+The above code will throw because the property is constant and cannot be
 changed.
 
 # License
