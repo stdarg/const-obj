@@ -17,11 +17,11 @@ The following are exported from the const-obj module:
   - [makeObjConst()](#makeobjconstobjobject)
   - [makePropConst()](#makepropconstobjectobjectpropertystring)
 
-## makeObjConst(obj:Object)
+## makeObjConst(obj)
 Recursively makes each property in the object and its sub-objects immutable.
 This function returns the object upon success and false upon failure.
 
-## makePropConst(object:Object, property:String)
+## makePropConst(Object, property)
 Make a property immutable (assuring it cannot be changed from the current
 value).  This operation cannot be un-done. This function returns the object on
 success and false on any failure.
