@@ -21,7 +21,7 @@ The following are exported from the const-obj module:
 Recursively makes each property in the object and its sub-objects immutable.
 This function returns the object upon success and false upon failure.
 
-## makePropConst(Object, property)
+## makePropConst(obj, property)
 Make a property immutable (assuring it cannot be changed from the current
 value).  This operation cannot be un-done. This function returns the object on
 success and false on any failure.
